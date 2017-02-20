@@ -8,10 +8,10 @@ namespace FibMVC.Biz
 {
     public class CalcFib
     {
-        public List<int> d;
-        public int a = 0;
-        public int b = 1;
-        public List<int> Fib()
+        public static List<int> d = new List<int>();
+        public static int a = 0;
+        public static int b = 1;
+        public static List<int> Fib()
         {
             for (int i = 0; i < 15; i++)
             {
@@ -23,7 +23,7 @@ namespace FibMVC.Biz
             return d;
         }
 
-        public List<int> Fib(int s)
+        public static List<int> Fib(int s)
         {
             a = 0;
             b = 1;

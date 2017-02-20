@@ -13,7 +13,11 @@
 </head>
 <body>
     <div>
-        
+        @foreach (var item in ViewData["Fib"] as List<int>)
+        {
+            @item
+            <br />
+        }
     </div>
 </body>
 </html>
