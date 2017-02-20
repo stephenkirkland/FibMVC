@@ -10,23 +10,31 @@ namespace FibMVC.Biz
     {
         public List<int> d;
         public int a = 0;
-        public int b = 0;
+        public int b = 1;
         public List<int> Fib()
         {
-            d.Add(0);
-            d.Add(1);
             for (int i = 0; i < 15; i++)
             {
                 int temp = a;
                 a = b;
                 b = temp + b;
+                d.Add(a);
             }
             return d;
         }
 
-        public void Fib(int s, int t)
+        public List<int> Fib(int s)
         {
-
+            a = 0;
+            b = 1;
+            for (int i = 0; i < s; i++)
+            {
+                int temp = a;
+                a = b;
+                b = temp + b;
+                d.Add(a);
+            }
+            return d;
         }
     }
 }
