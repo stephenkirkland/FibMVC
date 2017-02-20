@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using FibMVC;
+using FibMVC.Biz;
 
 namespace FibMVC.Controllers
 {
@@ -15,16 +16,25 @@ namespace FibMVC.Controllers
             return View();
         }
 
-        public ViewResult FibInput(int s)
-        {
-            ViewData["FibInput"] = Biz.CalcFib.Fib(s);
-            return View();
-        }
-
         public PartialViewResult fib()
         {
             ViewData["Fib"] = Biz.CalcFib.Fib();
             return PartialView(ViewData["Fib"]);
+        }
+
+        //ViewData["FibInput"] = Biz.CalcFib.Fib(s);
+
+        [HttpGet]
+        public ViewResult FibInput()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult FibInput(CalcFib c)
+        {
+            ViewData["list"] = Biz.CalcFib.d;
+            return View("Results", c);
         }
     }
 }

@@ -137,6 +137,7 @@
     <Content Include="Views\Fib\test.cshtml" />
     <Content Include="Views\Fib\FibInput.cshtml" />
     <Content Include="Views\Fib\fib.cshtml" />
+    <Content Include="Views\Fib\Results.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

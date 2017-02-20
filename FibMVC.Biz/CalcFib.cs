@@ -13,6 +13,25 @@ namespace FibMVC.Biz
         public static int a = 0;
         public static int b = 0;
         public static int p = 0;
+        
+        public CalcFib()
+        {
+        }
+
+        public CalcFib(int s)
+        {
+            p = s;
+            a = 0;
+            b = 1;
+            for (int i = 0; i < s; i++)
+            {
+                int temp = a;
+                a = b;
+                b = temp + b;
+                d.Add(a);
+            }
+        }
+
         public static List<int> Fib()
         {
             for (int i = 0; i < 15; i++)
@@ -41,7 +60,6 @@ namespace FibMVC.Biz
 
         public int UserInput
         {
-            //HERE --- get not correct...
             get { return p; }
             set { p = value; }
         }
