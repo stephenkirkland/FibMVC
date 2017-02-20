@@ -9,16 +9,17 @@ namespace FibMVC.Biz
     public class CalcFib
     {
         public static List<int> d = new List<int>();
+        public static int temp = 1;
         public static int a = 0;
-        public static int b = 1;
+        public static int b = 0;
         public static List<int> Fib()
         {
             for (int i = 0; i < 15; i++)
             {
-                int temp = a;
                 a = b;
                 b = temp + b;
                 d.Add(a);
+                temp = a;
             }
             return d;
         }
