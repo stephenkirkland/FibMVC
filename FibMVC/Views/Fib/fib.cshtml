@@ -1,2 +1,7 @@
-﻿@model FibMVC.Biz.CalcFib
+﻿@model IEnumerable<int>
 
+@foreach (var item in ViewData["Fib"] as List<int>)
+{
+    @item
+    <br />
+}

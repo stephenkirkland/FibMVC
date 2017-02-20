@@ -12,7 +12,12 @@ namespace FibMVC.Controllers
         // GET: Fib
         public ViewResult test()
         {
-            ViewData["Fib"] = Biz.CalcFib.Fib();
+            return View();
+        }
+
+        public ViewResult FibInput(int s)
+        {
+            ViewData["FibInput"] = Biz.CalcFib.Fib(s);
             return View();
         }
 
@@ -20,12 +25,6 @@ namespace FibMVC.Controllers
         {
             ViewData["Fib"] = Biz.CalcFib.Fib();
             return PartialView(ViewData["Fib"]);
-        }
-
-        public ViewResult FibInput(int s)
-        {
-            ViewData["FibInput"] = Biz.CalcFib.Fib(s);
-            return View();
         }
     }
 }
