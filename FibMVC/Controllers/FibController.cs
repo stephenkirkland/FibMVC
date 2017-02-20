@@ -15,5 +15,17 @@ namespace FibMVC.Controllers
             ViewData["Fib"] = Biz.CalcFib.Fib();
             return View();
         }
+
+        public PartialViewResult fib()
+        {
+            ViewData["Fib"] = Biz.CalcFib.Fib();
+            return PartialView(ViewData["Fib"]);
+        }
+
+        public ViewResult FibInput(int s)
+        {
+            ViewData["FibInput"] = Biz.CalcFib.Fib(s);
+            return View();
+        }
     }
 }

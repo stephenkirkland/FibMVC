@@ -12,6 +12,7 @@ namespace FibMVC.Biz
         public static int temp = 1;
         public static int a = 0;
         public static int b = 0;
+        public static int p = 0;
         public static List<int> Fib()
         {
             for (int i = 0; i < 15; i++)
@@ -37,5 +38,13 @@ namespace FibMVC.Biz
             }
             return d;
         }
+
+        public int UserInput
+        {
+            //HERE --- get not correct...
+            get { return p; }
+            set { p = value; }
+        }
+
     }
 }
